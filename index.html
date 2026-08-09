@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio Power BI | Gestion immobilière</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f7f9fc;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 1450px;
+            margin: auto;
+            padding: 50px 35px 80px 35px;
+        }
+
+        /* HEADER */
+
+        .header {
+            margin-bottom: 45px;
+        }
+
+        .header h1 {
+            color: #073b78;
+            font-size: 42px;
+            margin: 0 0 8px 0;
+        }
+
+        .header .subtitle {
+            font-size: 20px;
+            color: #667085;
+            margin-bottom: 25px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #e8f0fb;
+            color: #073b78;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* SECTIONS */
+
+        section {
+            margin-top: 55px;
+        }
+
+        h2 {
+            color: #073b78;
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+
+        h3 {
+            color: #073b78;
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 16px;
+            color: #475467;
+        }
+
+        /* NOTICE DONNEES FICTIVES */
+
+        .data-notice {
+            margin-top: 35px;
+            padding: 22px 25px;
+            background-color: #eef5ff;
+            border-left: 5px solid #2563eb;
+            border-radius: 8px;
+        }
+
+        .data-notice strong {
+            color: #073b78;
+        }
+
+        /* POWER BI */
+
+        .dashboard-container {
+            background-color: white;
+            border-radius: 14px;
+            padding: 12px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .dashboard-frame {
+            position: relative;
+            width: 100%;
+            padding-bottom: 62%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .dashboard-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .card p {
+            margin-bottom: 0;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .skill {
+            background: white;
+            padding: 22px;
+            border-radius: 10px;
+            text-align: center;
+            color: #073b78;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 70px;
+            padding-top: 25px;
+            border-top: 1px solid #d0d5dd;
+            color: #667085;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .cards,
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <h1>Gestion immobilière — Tableau de bord Power BI</h1>
+
+        <div class="subtitle">
+            Pilotage financier, opérationnel et organisationnel d'une société suisse de gestion immobilière
+        </div>
+
+        <div class="tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Power Query</span>
+            <span class="tag">Data Modeling</span>
+            <span class="tag">Finance</span>
+            <span class="tag">Immobilier</span>
+            <span class="tag">Data Visualisation</span>
+        </div>
+
+    </header>
+
+
+    <!-- PRESENTATION -->
+
+    <section>
+
+        <h2>Présentation du projet</h2>
+
+        <p>
+            Ce rapport a été conçu afin de fournir une vision consolidée de
+            l'activité d'une société suisse de gestion immobilière et de faciliter
+            le pilotage de ses performances financières, opérationnelles et
+            organisationnelles.
+        </p>
+
+        <p>
+            L'objectif est de regrouper au sein d'un même environnement les
+            principaux indicateurs nécessaires à la direction pour comprendre
+            rapidement la situation de l'entreprise, identifier les évolutions
+            importantes et approfondir les éléments nécessitant une analyse
+            complémentaire.
+        </p>
+
+        <p>
+            Le rapport permet notamment de suivre le chiffre d'affaires, la
+            rentabilité, les charges, le portefeuille immobilier sous gestion,
+            la vacance locative, les propriétaires, les différents types de
+            mandats ainsi que les effectifs et la charge de travail des
+            collaborateurs.
+        </p>
+
+        <p>
+            Les différentes analyses peuvent être adaptées grâce à des filtres
+            de période, d'agence et de canton. Les indicateurs et graphiques
+            évoluent ainsi en fonction du périmètre sélectionné, permettant de
+            passer d'une vision globale de l'entreprise à une analyse plus
+            détaillée de son activité.
+        </p>
+
+
+        <!-- DONNEES FICTIVES -->
+
+        <div class="data-notice">
+
+            <strong>Données entièrement fictives</strong>
+
+            <p>
+                Ce projet repose exclusivement sur une base de données fictive
+                et synthétique créée à des fins de démonstration.
+            </p>
+
+            <p>
+                Les sociétés, propriétaires, collaborateurs, immeubles,
+                adresses, montants financiers, loyers, mandats et autres
+                informations présentés dans le rapport ne correspondent à
+                aucune entreprise ou situation réelle.
+            </p>
+
+            <p>
+                L'objectif est de reproduire de manière réaliste les principales
+                problématiques de pilotage d'une société suisse de gestion
+                immobilière tout en garantissant qu'aucune donnée confidentielle
+                ou professionnelle réelle n'est utilisée.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD -->
+
+    <section>
+
+        <h2>Rapport interactif</h2>
+
+        <p>
+            Le rapport ci-dessous peut être consulté directement.
+            Les filtres, graphiques et différentes pages sont interactifs.
+        </p>
+
+        <div class="dashboard-container">
+
+            <div class="dashboard-frame">
+
+              <iframe
+                    title="Power BI - Gestion immobilière"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiZWJiOWU2NDMtZGFmOC00NTJkLTg2ZDQtNGZlM2M4M2E4ZWFmIiwidCI6IjI4Y2IzMTRlLTBmNjMtNGRkNC1iYmU4LWM2M2U5MWJjOTFjNCJ9"
+                    allowFullScreen="true">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STRUCTURE DU RAPPORT -->
+
+    <section>
+
+        <h2>Structure du rapport</h2>
+
+        <p>
+            Le rapport est organisé autour de quatre axes complémentaires
+            permettant de passer progressivement d'une vision générale de
+            l'entreprise à des analyses plus détaillées.
+        </p>
+
+        <div class="cards">
+
+
+            <!-- SYNTHESE -->
+
+            <div class="card">
+
+                <h3>01 — Synthèse</h3>
+
+                <p>
+                    Cette page constitue le point d'entrée principal du rapport.
+                    Elle rassemble les indicateurs essentiels permettant
+                    d'obtenir rapidement une vision globale de la performance
+                    de l'entreprise.
+                </p>
+
+                <p>
+                    Elle présente notamment le chiffre d'affaires, l'EBITDA,
+                    le résultat opérationnel, la marge opérationnelle, le nombre
+                    d'objets sous gestion, la vacance locative, les pertes
+                    locatives ainsi que les effectifs en équivalents temps plein.
+                </p>
+
+                <p>
+                    Des analyses complémentaires permettent de suivre
+                    l'évolution mensuelle du chiffre d'affaires et de l'EBITDA,
+                    la contribution des différentes agences, les principaux
+                    propriétaires ainsi que les écarts entre réalisé et budget.
+                </p>
+
+            </div>
+
+
+            <!-- FINANCE -->
+
+            <div class="card">
+
+                <h3>02 — Performances financières</h3>
+
+                <p>
+                    Cette page approfondit la lecture financière du rapport et
+                    permet de comprendre la formation du résultat.
+                </p>
+
+                <p>
+                    Elle analyse notamment le niveau de réalisation du chiffre
+                    d'affaires, la consommation des charges, la marge EBITDA,
+                    le poids des charges de personnel ainsi que la productivité
+                    mesurée au travers du chiffre d'affaires et du résultat par
+                    ETP.
+                </p>
+
+                <p>
+                    Le compte de résultat détaillé compare les montants réalisés
+                    au budget et met en évidence les principaux écarts afin
+                    d'identifier rapidement les éléments nécessitant une
+                    attention particulière.
+                </p>
+
+            </div>
+
+
+            <!-- PORTEFEUILLE -->
+
+            <div class="card">
+
+                <h3>03 — Portefeuille de gestion</h3>
+
+                <p>
+                    Cette page est consacrée au portefeuille immobilier
+                    administré par l'entreprise.
+                </p>
+
+                <p>
+                    Elle permet de suivre le nombre de propriétaires, d'immeubles
+                    et d'objets sous gestion, ainsi que les états locatifs,
+                    les relocations et la vacance.
+                </p>
+
+                <p>
+                    Une cartographie permet également de visualiser la
+                    répartition géographique des mandats tandis que les
+                    graphiques d'évolution permettent d'analyser les changements
+                    du portefeuille dans le temps.
+                </p>
+
+                <p>
+                    La vacance est analysée simultanément en nombre d'objets
+                    et en valeur locative afin d'en apprécier à la fois
+                    l'importance opérationnelle et l'impact financier.
+                </p>
+
+            </div>
+
+
+            <!-- COLLABORATEURS -->
+
+            <div class="card">
+
+                <h3>04 — Collaborateurs</h3>
+
+                <p>
+                    Cette page met en relation les ressources humaines avec
+                    le portefeuille réellement administré.
+                </p>
+
+                <p>
+                    Elle présente notamment les effectifs, les ETP, la masse
+                    salariale, le salaire moyen ainsi que le nombre moyen
+                    d'objets suivis par les principales fonctions.
+                </p>
+
+                <p>
+                    Une analyse individuelle permet également de comparer
+                    la charge du portefeuille, le chiffre d'affaires associé
+                    et le chiffre d'affaires moyen généré par objet.
+                </p>
+
+                <p>
+                    L'objectif est d'apporter une vision complémentaire de
+                    la productivité et de l'équilibre de la charge de travail
+                    entre les différentes équipes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OBJECTIF -->
+
+    <section>
+
+        <h2>Une approche orientée aide à la décision</h2>
+
+        <p>
+            La construction du rapport permet plusieurs niveaux de lecture.
+            Un membre de la direction souhaitant connaître rapidement la
+            situation de l'entreprise peut se concentrer sur les principaux
+            indicateurs de synthèse.
+        </p>
+
+        <p>
+            Lorsqu'un indicateur nécessite une analyse complémentaire, les
+            différentes pages permettent ensuite d'en rechercher les causes
+            au niveau financier, immobilier ou organisationnel.
+        </p>
+
+        <p>
+            L'objectif final est de transformer un volume important de données
+            financières, immobilières et RH en une information lisible,
+            cohérente et directement exploitable pour le pilotage de
+            l'entreprise et la prise de décision.
+        </p>
+
+    </section>
+
+
+    <!-- COMPETENCES -->
+
+    <section>
+
+        <h2>Compétences mises en œuvre</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                Power BI
+            </div>
+
+            <div class="skill">
+                Modélisation de données
+            </div>
+
+            <div class="skill">
+                DAX
+            </div>
+
+            <div class="skill">
+                Power Query
+            </div>
+
+            <div class="skill">
+                Analyse financière
+            </div>
+
+            <div class="skill">
+                Analyse immobilière
+            </div>
+
+            <div class="skill">
+                Data Visualisation
+            </div>
+
+            <div class="skill">
+                Construction de KPI
+            </div>
+
+            <div class="skill">
+                Aide à la décision
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        Projet de démonstration Power BI — données 100 % fictives et synthétiques.
+
+    </footer>
+
+
+</div>
+
+</body>
+
+</html>
