@@ -2,12 +2,17 @@
 <html lang="fr">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Steve Servais | Tableau de bord Power BI</title>
 
     <style>
+
+        /* =========================================================
+           BASE
+        ========================================================= */
 
         * {
             box-sizing: border-box;
@@ -20,151 +25,307 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f7f9fc;
-            color: #1f2937;
+            background: #f6f8fb;
+            color: #172033;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         .container {
+            width: calc(100% - 50px);
             max-width: 1450px;
             margin: auto;
-            padding: 35px 35px 60px 35px;
         }
 
 
         /* =========================================================
-           PRESENTATION
+           HEADER / HERO
         ========================================================= */
 
         .hero {
-            background: linear-gradient(
-                135deg,
-                #073b78 0%,
-                #0b4f9c 100%
-            );
-
-            border-radius: 18px;
-            padding: 38px 45px;
-            color: white;
-            box-shadow: 0 8px 28px rgba(7, 59, 120, 0.15);
+            padding: 75px 0 65px 0;
         }
 
-        .hero-content {
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 260px;
+            gap: 75px;
+            align-items: center;
+        }
+
+        .hero-label {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 45px;
-        }
+            gap: 12px;
 
-        .hero-text {
-            flex: 1;
-        }
+            margin-bottom: 22px;
 
-        .eyebrow {
+            color: #2563eb;
             font-size: 13px;
             font-weight: 700;
-            letter-spacing: 2px;
-            color: #9ed9e5;
-            margin-bottom: 12px;
+            letter-spacing: 1.7px;
+            text-transform: uppercase;
+        }
+
+        .hero-label::before {
+            content: "";
+            width: 42px;
+            height: 2px;
+            background: #2563eb;
         }
 
         .hero h1 {
             margin: 0;
-            color: white;
-            font-size: 42px;
-            line-height: 1.1;
-        }
 
-        .hero h1 span {
-            display: block;
-            margin-top: 8px;
-            font-size: 23px;
-            font-weight: 400;
-            color: #d7e6f8;
-        }
+            font-size: clamp(48px, 6vw, 78px);
+            line-height: 0.98;
+            letter-spacing: -3px;
 
-        .hero-description {
-            max-width: 820px;
-            margin-top: 20px;
-            margin-bottom: 0;
-            color: #e5edf7;
-            font-size: 16px;
-            line-height: 1.65;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 24px;
-            margin-bottom: 24px;
-        }
-
-        .button-primary,
-        .button-secondary {
-            display: inline-block;
-            padding: 11px 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.2s ease;
-        }
-
-        .button-primary {
-            background-color: white;
             color: #073b78;
         }
 
-        .button-primary:hover {
-            background-color: #edf4ff;
-            transform: translateY(-1px);
+        .hero-title {
+            display: block;
+
+            margin-top: 15px;
+
+            font-size: clamp(25px, 3vw, 38px);
+            font-weight: 400;
+            letter-spacing: -1px;
+
+            color: #667085;
         }
 
-        .button-secondary {
+        .hero-description {
+            max-width: 760px;
+
+            margin-top: 28px;
+            margin-bottom: 0;
+
+            font-size: 17px;
+            line-height: 1.75;
+
+            color: #475467;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 20px;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #073b78;
             color: white;
-            border: 1px solid rgba(255, 255, 255, 0.55);
         }
 
-        .button-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.10);
-            transform: translateY(-1px);
+        .btn-primary:hover {
+            background: #052e5f;
+            transform: translateY(-2px);
         }
+
+        .btn-secondary {
+            background: white;
+            color: #073b78;
+
+            border: 1px solid #d5dae2;
+        }
+
+        .btn-secondary:hover {
+            border-color: #073b78;
+            transform: translateY(-2px);
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+
+            margin-top: 28px;
+        }
+
+        .tag {
+            padding: 7px 12px;
+
+            background: #e9f1fb;
+            color: #073b78;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+
+        /* PHOTO */
 
         .hero-photo {
-            flex: 0 0 185px;
+            position: relative;
+        }
+
+        .hero-photo::before {
+            content: "";
+
+            position: absolute;
+            left: 18px;
+            top: 18px;
+
+            width: 100%;
+            height: 100%;
+
+            background: #dcecff;
+
+            border-radius: 18px;
+
+            z-index: -1;
         }
 
         .hero-photo img {
             display: block;
-            width: 185px;
-            height: 185px;
+
+            width: 100%;
+            aspect-ratio: 1 / 1.12;
+
             object-fit: cover;
             object-position: center;
-            border-radius: 14px;
-            border: 3px solid rgba(255, 255, 255, 0.22);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.20);
+
+            border-radius: 18px;
+
+            box-shadow: 0 18px 45px rgba(7, 59, 120, 0.14);
         }
 
 
         /* =========================================================
-           TAGS
+           PROJECT HEADER
         ========================================================= */
 
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+        .project {
+            margin-top: 20px;
+
+            background: #073b78;
+            color: white;
+
+            border-radius: 22px;
+
+            padding: 45px 48px;
+
+            overflow: hidden;
+            position: relative;
         }
 
-        .tag {
-            padding: 7px 13px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
+        .project::after {
+            content: "";
 
-            background: rgba(255, 255, 255, 0.12);
+            position: absolute;
+
+            width: 380px;
+            height: 380px;
+
+            border-radius: 50%;
+
+            right: -170px;
+            top: -210px;
+
+            border: 70px solid rgba(255,255,255,0.04);
+        }
+
+        .project-number {
+            color: #8fd4e5;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            margin-bottom: 13px;
+        }
+
+        .project h2 {
+            position: relative;
+            z-index: 1;
+
+            max-width: 850px;
+
+            margin: 0;
+
             color: white;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+
+            font-size: clamp(31px, 4vw, 48px);
+            letter-spacing: -1.5px;
+            line-height: 1.08;
+        }
+
+        .project-description {
+            position: relative;
+            z-index: 1;
+
+            max-width: 850px;
+
+            margin-top: 20px;
+
+            color: #dce8f7;
+
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           PROJECT METRICS
+        ========================================================= */
+
+        .metrics {
+            position: relative;
+            z-index: 1;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            margin-top: 35px;
+
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .metric {
+            padding: 25px 25px 0 0;
+        }
+
+        .metric-value {
+            display: block;
+
+            color: white;
+
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .metric-label {
+            display: block;
+
+            margin-top: 6px;
+
+            color: #aebfd5;
+
+            font-size: 13px;
         }
 
 
@@ -173,56 +334,38 @@
         ========================================================= */
 
         section {
-            margin-top: 48px;
+            margin-top: 65px;
         }
 
-        h2 {
+        .section-label {
+            color: #2563eb;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.7px;
+            text-transform: uppercase;
+
+            margin-bottom: 9px;
+        }
+
+        h2.section-title {
+            margin: 0 0 16px 0;
+
             color: #073b78;
-            font-size: 27px;
-            margin-bottom: 15px;
+
+            font-size: 30px;
+            letter-spacing: -0.6px;
         }
 
-        h3 {
-            color: #073b78;
-            font-size: 19px;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
+        .section-description {
+            max-width: 900px;
 
-        p {
-            line-height: 1.65;
+            color: #667085;
+
+            line-height: 1.7;
             font-size: 16px;
-            color: #475467;
-        }
 
-        .project-text {
-            max-width: 1050px;
-        }
-
-
-        /* =========================================================
-           DONNEES FICTIVES
-        ========================================================= */
-
-        .data-notice {
-            margin-top: 25px;
-            padding: 18px 22px;
-
-            background-color: #eef5ff;
-            border-left: 4px solid #2563eb;
-            border-radius: 8px;
-        }
-
-        .data-notice strong {
-            display: block;
-            color: #073b78;
-            font-size: 16px;
-            margin-bottom: 6px;
-        }
-
-        .data-notice p {
-            margin: 0;
-            font-size: 15px;
+            margin-bottom: 25px;
         }
 
 
@@ -231,24 +374,33 @@
         ========================================================= */
 
         .dashboard-container {
-            background-color: white;
-            border-radius: 14px;
-            padding: 12px;
+            padding: 10px;
 
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
+            background: white;
+
+            border-radius: 16px;
+
+            box-shadow: 0 10px 35px rgba(18, 38, 63, 0.08);
+
+            border: 1px solid #e7eaf0;
         }
 
         .dashboard-frame {
             position: relative;
+
             width: 100%;
             height: 0;
+
             padding-bottom: 62%;
+
             overflow: hidden;
+
+            border-radius: 10px;
         }
 
         .dashboard-frame iframe {
             position: absolute;
+
             top: 0;
             left: 0;
 
@@ -260,29 +412,82 @@
 
 
         /* =========================================================
-           CARTES DES PAGES
+           ANALYSES
         ========================================================= */
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            margin-top: 22px;
+        .analysis-list {
+            margin-top: 20px;
+
+            border-top: 1px solid #dfe4eb;
         }
 
-        .card {
-            background-color: white;
-            padding: 22px 24px;
+        .analysis-row {
+            display: grid;
+            grid-template-columns: 85px 300px 1fr;
+
+            gap: 30px;
+            align-items: center;
+
+            padding: 24px 5px;
+
+            border-bottom: 1px solid #dfe4eb;
+        }
+
+        .analysis-number {
+            color: #9aa4b2;
+
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .analysis-title {
+            color: #073b78;
+
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .analysis-description {
+            color: #667085;
+
+            font-size: 15px;
+            line-height: 1.55;
+        }
+
+
+        /* =========================================================
+           DATA NOTICE
+        ========================================================= */
+
+        .data-notice {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+
+            gap: 30px;
+
+            margin-top: 55px;
+
+            padding: 26px 30px;
+
+            background: #eaf2fc;
 
             border-radius: 12px;
-            border: 1px solid #edf0f4;
-
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
-        .card p {
+        .data-notice-title {
+            color: #073b78;
+
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .data-notice p {
             margin: 0;
-            font-size: 15px;
+
+            color: #53657a;
+
+            font-size: 14px;
+            line-height: 1.65;
         }
 
 
@@ -291,127 +496,211 @@
         ========================================================= */
 
         footer {
-            margin-top: 55px;
-            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-            border-top: 1px solid #d0d5dd;
+            margin-top: 70px;
+            padding: 27px 0 35px 0;
 
-            color: #667085;
+            border-top: 1px solid #d7dde6;
+
+            color: #8a94a3;
+
             font-size: 13px;
-            text-align: center;
+        }
+
+        .footer-name {
+            color: #073b78;
+            font-weight: 700;
         }
 
 
         /* =========================================================
-           MOBILE
+           RESPONSIVE
         ========================================================= */
 
-        @media (max-width: 900px) {
+        @media (max-width: 950px) {
+
+            .hero-grid {
+                grid-template-columns: 1fr 190px;
+                gap: 35px;
+            }
+
+            .metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .analysis-row {
+                grid-template-columns: 50px 230px 1fr;
+                gap: 15px;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
 
             .container {
-                padding: 20px 18px 45px 18px;
+                width: calc(100% - 30px);
             }
 
             .hero {
-                padding: 30px 24px;
+                padding-top: 35px;
             }
 
-            .hero-content {
+            .hero-grid {
+                display: flex;
                 flex-direction: column-reverse;
                 align-items: flex-start;
-                gap: 25px;
             }
 
             .hero-photo {
-                flex-basis: auto;
-            }
-
-            .hero-photo img {
-                width: 145px;
-                height: 145px;
+                width: 140px;
             }
 
             .hero h1 {
-                font-size: 34px;
+                letter-spacing: -2px;
             }
 
-            .hero h1 span {
-                font-size: 21px;
+            .project {
+                padding: 32px 25px;
             }
 
-            .cards {
+            .metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .metric-value {
+                font-size: 24px;
+            }
+
+            .analysis-row {
+                display: block;
+
+                padding: 22px 0;
+            }
+
+            .analysis-number {
+                display: block;
+
+                margin-bottom: 7px;
+            }
+
+            .analysis-title {
+                display: block;
+
+                margin-bottom: 7px;
+            }
+
+            .data-notice {
                 grid-template-columns: 1fr;
+
+                gap: 10px;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+
+                gap: 8px;
             }
 
             .dashboard-frame {
-                padding-bottom: 78%;
+                padding-bottom: 80%;
             }
+
         }
 
     </style>
+
 </head>
 
 
 <body>
 
+
 <div class="container">
 
 
     <!-- =========================================================
-         PRESENTATION PERSONNELLE
+         PRESENTATION
     ========================================================== -->
 
     <header class="hero">
 
-        <div class="hero-content">
+        <div class="hero-grid">
 
-            <div class="hero-text">
 
-                <div class="eyebrow">
-                    DATA & BUSINESS ANALYST
+            <div>
+
+                <div class="hero-label">
+                    Data & Business Analyst
                 </div>
 
+
                 <h1>
+
                     Steve Servais
-                    <span>Finance & Immobilier</span>
+
+                    <span class="hero-title">
+                        Tableau de bord Power BI
+                    </span>
+
                 </h1>
 
+
                 <p class="hero-description">
-                    J'utilise la donnée et Power BI pour transformer des informations
-                    financières, immobilières et opérationnelles en outils de pilotage
-                    clairs et directement exploitables.
-                    Vous trouverez sur cette page un exemple de projet Power BI
-                    ainsi que mon CV.
+
+                    Spécialisé dans l'analyse financière, immobilière et
+                    opérationnelle, j'utilise la donnée et la Business Intelligence
+                    pour construire des outils de pilotage clairs et directement
+                    exploitables par les équipes métier et les directions.
+
+                    Vous trouverez ici un exemple de projet Power BI ainsi que mon CV.
+
                 </p>
 
-                <div class="hero-buttons">
 
-                    <a
-                        href="CV_Steve_Servais.pdf"
-                        class="button-primary"
-                        download>
-                        Télécharger mon CV
-                    </a>
+                <div class="hero-actions">
 
                     <a
                         href="#dashboard"
-                        class="button-secondary">
-                        Voir le rapport
+                        class="btn btn-primary">
+
+                        Découvrir le projet
+
+                    </a>
+
+
+                    <a
+                        href="CV_Steve_Servais.pdf"
+                        class="btn btn-secondary"
+                        target="_blank">
+
+                        Consulter mon CV
+
                     </a>
 
                 </div>
 
-                <div class="tags">
+
+                <div class="hero-tags">
 
                     <span class="tag">Power BI</span>
+
                     <span class="tag">DAX</span>
+
                     <span class="tag">Power Query</span>
+
                     <span class="tag">Finance</span>
+
                     <span class="tag">Immobilier</span>
 
                 </div>
 
             </div>
+
 
 
             <div class="hero-photo">
@@ -422,6 +711,7 @@
 
             </div>
 
+
         </div>
 
     </header>
@@ -429,71 +719,250 @@
 
 
     <!-- =========================================================
-         PRESENTATION DU PROJET
+         PROJET
     ========================================================== -->
 
-    <section>
+    <div class="project">
 
-        <h2>Le projet</h2>
-
-        <div class="project-text">
-
-            <p>
-                Ce tableau de bord Power BI simule le pilotage d'une société suisse
-                de gestion immobilière. Il permet de suivre les principaux indicateurs
-                financiers et opérationnels : chiffre d'affaires, rentabilité, budget,
-                portefeuille sous gestion, vacance locative et collaborateurs.
-            </p>
-
-            <p>
-                Le rapport est entièrement interactif et peut être analysé
-                par période, agence et canton.
-            </p>
-
+        <div class="project-number">
+            Projet sélectionné — 01
         </div>
 
 
-        <div class="data-notice">
+        <h2>
+            Pilotage d'une société suisse de gestion immobilière
+        </h2>
 
-            <strong>Données 100 % fictives</strong>
 
-            <p>
-                L'ensemble des sociétés, personnes, immeubles, adresses et données
-                financières présentés dans ce projet est fictif et a été créé
-                uniquement à des fins de démonstration.
-                La période d'analyse couvre janvier 2025 à décembre 2026.
-            </p>
+        <p class="project-description">
+
+            Conception d'un tableau de bord Power BI permettant d'analyser
+            la performance financière, le portefeuille sous gestion,
+            la vacance locative et la charge des collaborateurs.
+
+            Le rapport permet une analyse dynamique par période,
+            agence et canton.
+
+        </p>
+
+
+        <div class="metrics">
+
+
+            <div class="metric">
+
+                <span class="metric-value">
+                    12
+                </span>
+
+                <span class="metric-label">
+                    agences
+                </span>
+
+            </div>
+
+
+            <div class="metric">
+
+                <span class="metric-value">
+                    ≈ 59K
+                </span>
+
+                <span class="metric-label">
+                    objets immobiliers
+                </span>
+
+            </div>
+
+
+            <div class="metric">
+
+                <span class="metric-value">
+                    24
+                </span>
+
+                <span class="metric-label">
+                    mois analysés
+                </span>
+
+            </div>
+
+
+            <div class="metric">
+
+                <span class="metric-value">
+                    4
+                </span>
+
+                <span class="metric-label">
+                    axes d'analyse
+                </span>
+
+            </div>
+
 
         </div>
 
-    </section>
+    </div>
 
 
 
     <!-- =========================================================
-         RAPPORT POWER BI
+         DASHBOARD
     ========================================================== -->
 
     <section id="dashboard">
 
-        <h2>Rapport interactif</h2>
 
-        <p>
-            Naviguez dans les différentes pages (icones sur le côté gauche) du rapport et utilisez
-            les filtres (en haut) pour explorer les données.
+        <div class="section-label">
+            Dashboard
+        </div>
+
+
+        <h2 class="section-title">
+            Rapport interactif
+        </h2>
+
+
+        <p class="section-description">
+
+            Naviguez directement dans le rapport et utilisez les filtres
+            pour explorer les différents niveaux d'analyse.
+
         </p>
+
 
         <div class="dashboard-container">
 
+
             <div class="dashboard-frame">
 
+
                 <iframe
+
                     title="Power BI - Gestion immobilière"
+
                     src="https://app.powerbi.com/view?r=eyJrIjoiZWJiOWU2NDMtZGFmOC00NTJkLTg2ZDQtNGZlM2M4M2E4ZWFmIiwidCI6IjI4Y2IzMTRlLTBmNjMtNGRkNC1iYmU4LWM2M2U5MWJjOTFjNCJ9"
+
                     allowFullScreen="true">
+
                 </iframe>
 
+
             </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         ANALYSES
+    ========================================================== -->
+
+    <section>
+
+
+        <div class="section-label">
+            Structure
+        </div>
+
+
+        <h2 class="section-title">
+            Les analyses proposées
+        </h2>
+
+
+        <div class="analysis-list">
+
+
+            <div class="analysis-row">
+
+                <div class="analysis-number">
+                    01
+                </div>
+
+                <div class="analysis-title">
+                    Synthèse
+                </div>
+
+                <div class="analysis-description">
+
+                    Vision globale de l'activité, de la rentabilité,
+                    du portefeuille et des principaux indicateurs de performance.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="analysis-row">
+
+                <div class="analysis-number">
+                    02
+                </div>
+
+                <div class="analysis-title">
+                    Performances financières
+                </div>
+
+                <div class="analysis-description">
+
+                    Analyse du chiffre d'affaires, du budget,
+                    des charges, de l'EBITDA et de la formation du résultat.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="analysis-row">
+
+                <div class="analysis-number">
+                    03
+                </div>
+
+                <div class="analysis-title">
+                    Portefeuille de gestion
+                </div>
+
+                <div class="analysis-description">
+
+                    Suivi des propriétaires, immeubles et objets,
+                    de la répartition géographique des mandats
+                    et de la vacance locative.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="analysis-row">
+
+                <div class="analysis-number">
+                    04
+                </div>
+
+                <div class="analysis-title">
+                    Collaborateurs
+                </div>
+
+                <div class="analysis-description">
+
+                    Analyse des effectifs, des ETP, de la charge
+                    des portefeuilles et des principaux indicateurs
+                    de productivité.
+
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -502,67 +971,32 @@
 
 
     <!-- =========================================================
-         PAGES DU RAPPORT
+         DONNEES FICTIVES
     ========================================================== -->
 
-    <section>
-
-        <h2>Les analyses proposées</h2>
-
-        <div class="cards">
+    <div class="data-notice">
 
 
-            <div class="card">
-
-                <h3>01 — Synthèse</h3>
-
-                <p>
-                    Vision globale de l'activité, de la rentabilité,
-                    du portefeuille et des principaux indicateurs de performance.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>02 — Performances financières</h3>
-
-                <p>
-                    Analyse du chiffre d'affaires, des charges,
-                    du budget et de la formation du résultat.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>03 — Portefeuille de gestion</h3>
-
-                <p>
-                    Suivi des immeubles et objets sous gestion,
-                    de la répartition géographique et de la vacance.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>04 — Collaborateurs</h3>
-
-                <p>
-                    Analyse des effectifs, de la charge des portefeuilles
-                    et des principaux indicateurs de productivité.
-                </p>
-
-            </div>
-
-
+        <div class="data-notice-title">
+            Données 100 % fictives
         </div>
 
-    </section>
+
+        <p>
+
+            Ce projet repose exclusivement sur une base de données synthétique
+            créée à des fins de démonstration.
+
+            Les sociétés, personnes, immeubles, adresses, loyers,
+            mandats et informations financières présentés ne correspondent
+            à aucune entreprise ni à aucune situation réelle.
+
+            La période d'analyse s'étend de janvier 2025 à décembre 2026.
+
+        </p>
+
+
+    </div>
 
 
 
@@ -572,14 +1006,22 @@
 
     <footer>
 
-        Steve Servais — Portfolio Power BI
-        <br>
-        Projet de démonstration basé sur des données 100 % fictives.
+
+        <div class="footer-name">
+            Steve Servais
+        </div>
+
+
+        <div>
+            Data & Business Analyst — Power BI
+        </div>
+
 
     </footer>
 
 
 </div>
+
 
 </body>
 
