@@ -367,7 +367,39 @@
 
             margin-bottom: 25px;
         }
+        
+/* =========================================================
+   CONSEIL DE CONSULTATION
+========================================================= */
 
+.dashboard-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    max-width: 900px;
+    margin: -5px 0 25px 0;
+    padding: 15px 18px;
+
+    background: #eef5ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+
+    color: #475467;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.dashboard-notice-icon {
+    color: #2563eb;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.dashboard-notice strong {
+    color: #073b78;
+}
 
         /* =========================================================
            POWER BI
@@ -824,15 +856,31 @@
         </h2>
 
 
-        <p class="section-description">
+<p class="section-description">
 
-            Naviguez, via les petites icones sur la gauche, dans le rapport et utilisez les filtres
-            pour explorer les différents niveaux d'analyse.
+    Naviguez via les icônes situées à gauche du rapport et utilisez les filtres
+    pour explorer les différents niveaux d'analyse.
 
-        </p>
+</p>
 
 
-        <div class="dashboard-container">
+    <div class="dashboard-notice">
+    
+        <div class="dashboard-notice-icon">
+            ⓘ
+        </div>
+    
+        <div>
+            <strong>Pour une consultation optimale :</strong>
+            ouvrez cette page depuis un navigateur internet sur ordinateur.
+            Utilisez directement les boutons et les icônes de navigation du rapport.
+            <strong>Ne cliquez pas sur le lien Microsoft Power BI affiché en bas du dashboard.</strong>
+        </div>
+    
+    </div>
+    
+    
+    <div class="dashboard-container">
 
 
             <div class="dashboard-frame">
