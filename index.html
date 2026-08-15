@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Steve Servais | Tableau de bord Power BI</title>
+    <title>Steve Servais | Projets Power BI</title>
 
     <style>
 
@@ -59,9 +59,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-
             margin-bottom: 22px;
-
             color: #2563eb;
             font-size: 13px;
             font-weight: 700;
@@ -78,35 +76,27 @@
 
         .hero h1 {
             margin: 0;
-
             font-size: clamp(48px, 6vw, 78px);
             line-height: 0.98;
             letter-spacing: -3px;
-
             color: #073b78;
         }
 
         .hero-title {
             display: block;
-
             margin-top: 15px;
-
             font-size: clamp(25px, 3vw, 38px);
             font-weight: 400;
             letter-spacing: -1px;
-
             color: #667085;
         }
 
         .hero-description {
             max-width: 760px;
-
             margin-top: 28px;
             margin-bottom: 0;
-
             font-size: 17px;
             line-height: 1.75;
-
             color: #475467;
         }
 
@@ -114,7 +104,6 @@
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
-
             margin-top: 30px;
         }
 
@@ -122,14 +111,10 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-
             padding: 13px 20px;
-
             border-radius: 8px;
-
             font-size: 14px;
             font-weight: 700;
-
             transition: 0.2s ease;
         }
 
@@ -146,7 +131,6 @@
         .btn-secondary {
             background: white;
             color: #073b78;
-
             border: 1px solid #d5dae2;
         }
 
@@ -159,18 +143,14 @@
             display: flex;
             flex-wrap: wrap;
             gap: 9px;
-
             margin-top: 28px;
         }
 
         .tag {
             padding: 7px 12px;
-
             background: #e9f1fb;
             color: #073b78;
-
             border-radius: 20px;
-
             font-size: 13px;
             font-weight: 600;
         }
@@ -184,32 +164,23 @@
 
         .hero-photo::before {
             content: "";
-
             position: absolute;
             left: 18px;
             top: 18px;
-
             width: 100%;
             height: 100%;
-
             background: #dcecff;
-
             border-radius: 18px;
-
             z-index: -1;
         }
 
         .hero-photo img {
             display: block;
-
             width: 100%;
             aspect-ratio: 1 / 1.12;
-
             object-fit: cover;
             object-position: center;
-
             border-radius: 18px;
-
             box-shadow: 0 18px 45px rgba(7, 59, 120, 0.14);
         }
 
@@ -220,55 +191,44 @@
 
         .project {
             margin-top: 20px;
-
             background: #073b78;
             color: white;
-
             border-radius: 22px;
-
             padding: 45px 48px;
-
             overflow: hidden;
             position: relative;
         }
 
+        .project-two {
+            margin-top: 80px;
+        }
+
         .project::after {
             content: "";
-
             position: absolute;
-
             width: 380px;
             height: 380px;
-
             border-radius: 50%;
-
             right: -170px;
             top: -210px;
-
-            border: 70px solid rgba(255,255,255,0.04);
+            border: 70px solid rgba(255, 255, 255, 0.04);
         }
 
         .project-number {
             color: #8fd4e5;
-
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-
             margin-bottom: 13px;
         }
 
         .project h2 {
             position: relative;
             z-index: 1;
-
             max-width: 850px;
-
             margin: 0;
-
             color: white;
-
             font-size: clamp(31px, 4vw, 48px);
             letter-spacing: -1.5px;
             line-height: 1.08;
@@ -277,13 +237,9 @@
         .project-description {
             position: relative;
             z-index: 1;
-
             max-width: 850px;
-
             margin-top: 20px;
-
             color: #dce8f7;
-
             font-size: 16px;
             line-height: 1.7;
         }
@@ -296,13 +252,10 @@
         .metrics {
             position: relative;
             z-index: 1;
-
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-
             margin-top: 35px;
-
-            border-top: 1px solid rgba(255,255,255,0.15);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .metric {
@@ -311,20 +264,15 @@
 
         .metric-value {
             display: block;
-
             color: white;
-
             font-size: 30px;
             font-weight: 700;
         }
 
         .metric-label {
             display: block;
-
             margin-top: 6px;
-
             color: #aebfd5;
-
             font-size: 13px;
         }
 
@@ -339,67 +287,59 @@
 
         .section-label {
             color: #2563eb;
-
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 1.7px;
             text-transform: uppercase;
-
             margin-bottom: 9px;
         }
 
         h2.section-title {
             margin: 0 0 16px 0;
-
             color: #073b78;
-
             font-size: 30px;
             letter-spacing: -0.6px;
         }
 
         .section-description {
             max-width: 900px;
-
             color: #667085;
-
             line-height: 1.7;
             font-size: 16px;
-
             margin-bottom: 25px;
         }
-        
-/* =========================================================
-   CONSEIL DE CONSULTATION
-========================================================= */
 
-.dashboard-notice {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
 
-    max-width: 900px;
-    margin: -5px 0 25px 0;
-    padding: 15px 18px;
+        /* =========================================================
+           CONSEIL DE CONSULTATION
+        ========================================================= */
 
-    background: #eef5ff;
-    border-left: 4px solid #2563eb;
-    border-radius: 8px;
+        .dashboard-notice {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            max-width: 900px;
+            margin: -5px 0 25px 0;
+            padding: 15px 18px;
+            background: #eef5ff;
+            border-left: 4px solid #2563eb;
+            border-radius: 8px;
+            color: #475467;
+            font-size: 14px;
+            line-height: 1.6;
+        }
 
-    color: #475467;
-    font-size: 14px;
-    line-height: 1.6;
-}
+        .dashboard-notice-icon {
+            color: #2563eb;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
 
-.dashboard-notice-icon {
-    color: #2563eb;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.4;
-}
+        .dashboard-notice strong {
+            color: #073b78;
+        }
 
-.dashboard-notice strong {
-    color: #073b78;
-}
 
         /* =========================================================
            POWER BI
@@ -407,38 +347,27 @@
 
         .dashboard-container {
             padding: 10px;
-
             background: white;
-
             border-radius: 16px;
-
             box-shadow: 0 10px 35px rgba(18, 38, 63, 0.08);
-
             border: 1px solid #e7eaf0;
         }
 
         .dashboard-frame {
             position: relative;
-
             width: 100%;
             height: 0;
-
             padding-bottom: 62%;
-
             overflow: hidden;
-
             border-radius: 10px;
         }
 
         .dashboard-frame iframe {
             position: absolute;
-
             top: 0;
             left: 0;
-
             width: 100%;
             height: 100%;
-
             border: none;
         }
 
@@ -449,39 +378,32 @@
 
         .analysis-list {
             margin-top: 20px;
-
             border-top: 1px solid #dfe4eb;
         }
 
         .analysis-row {
             display: grid;
             grid-template-columns: 85px 300px 1fr;
-
             gap: 30px;
             align-items: center;
-
             padding: 24px 5px;
-
             border-bottom: 1px solid #dfe4eb;
         }
 
         .analysis-number {
             color: #9aa4b2;
-
             font-size: 15px;
             font-weight: 700;
         }
 
         .analysis-title {
             color: #073b78;
-
             font-size: 19px;
             font-weight: 700;
         }
 
         .analysis-description {
             color: #667085;
-
             font-size: 15px;
             line-height: 1.55;
         }
@@ -494,30 +416,22 @@
         .data-notice {
             display: grid;
             grid-template-columns: 200px 1fr;
-
             gap: 30px;
-
             margin-top: 55px;
-
             padding: 26px 30px;
-
             background: #eaf2fc;
-
             border-radius: 12px;
         }
 
         .data-notice-title {
             color: #073b78;
-
             font-size: 16px;
             font-weight: 700;
         }
 
         .data-notice p {
             margin: 0;
-
             color: #53657a;
-
             font-size: 14px;
             line-height: 1.65;
         }
@@ -531,14 +445,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             margin-top: 70px;
             padding: 27px 0 35px 0;
-
             border-top: 1px solid #d7dde6;
-
             color: #8a94a3;
-
             font-size: 13px;
         }
 
@@ -609,32 +519,27 @@
 
             .analysis-row {
                 display: block;
-
                 padding: 22px 0;
             }
 
             .analysis-number {
                 display: block;
-
                 margin-bottom: 7px;
             }
 
             .analysis-title {
                 display: block;
-
                 margin-bottom: 7px;
             }
 
             .data-notice {
                 grid-template-columns: 1fr;
-
                 gap: 10px;
             }
 
             footer {
                 flex-direction: column;
                 align-items: flex-start;
-
                 gap: 8px;
             }
 
@@ -667,7 +572,7 @@
             <div>
 
                 <div class="hero-label">
-                    Data & Business Analyst
+                    Data &amp; Business Analyst
                 </div>
 
 
@@ -676,7 +581,7 @@
                     Steve Servais
 
                     <span class="hero-title">
-                        Tableau de bord Power BI
+                        Tableaux de bord Power BI
                     </span>
 
                 </h1>
@@ -689,7 +594,7 @@
                     pour construire des outils de pilotage clairs et directement
                     exploitables par les équipes métier et les directions.
 
-                    Vous trouverez ici un exemple de projet Power BI ainsi que mon CV.
+                    Vous trouverez ici deux exemples de projets Power BI ainsi que mon CV.
 
                 </p>
 
@@ -700,7 +605,7 @@
                         href="#dashboard"
                         class="btn btn-primary">
 
-                        Découvrir le projet
+                        Découvrir les projets
 
                     </a>
 
@@ -708,7 +613,8 @@
                     <a
                         href="CV_Steve_Servais.pdf"
                         class="btn btn-secondary"
-                        target="_blank">
+                        target="_blank"
+                        rel="noopener noreferrer">
 
                         Consulter mon CV
 
@@ -720,13 +626,10 @@
                 <div class="hero-tags">
 
                     <span class="tag">Power BI</span>
-
                     <span class="tag">Excel</span>
-
+                    <span class="tag">AI</span>
                     <span class="tag">Analyse de données</span>
-
                     <span class="tag">Finance</span>
-
                     <span class="tag">Immobilier</span>
 
                 </div>
@@ -751,10 +654,10 @@
 
 
     <!-- =========================================================
-         PROJET
+         PROJET 1 — CONTENU CONSERVE
     ========================================================== -->
 
-    <div class="project">
+    <div class="project" id="projet-1">
 
         <div class="project-number">
             Projet sélectionné — 01
@@ -840,7 +743,7 @@
 
 
     <!-- =========================================================
-         DASHBOARD
+         DASHBOARD PROJET 1
     ========================================================== -->
 
     <section id="dashboard">
@@ -856,44 +759,40 @@
         </h2>
 
 
-<p class="section-description">
+        <p class="section-description">
 
-    Naviguez via les icônes situées à gauche du rapport et utilisez les filtres
-    pour explorer les différents niveaux d'analyse.
+            Naviguez via les icônes situées à gauche du rapport et utilisez les filtres
+            pour explorer les différents niveaux d'analyse.
 
-</p>
+        </p>
 
 
-    <div class="dashboard-notice">
-    
-        <div class="dashboard-notice-icon">
-            ⓘ
+        <div class="dashboard-notice">
+
+            <div class="dashboard-notice-icon">
+                ⓘ
+            </div>
+
+            <div>
+                <strong>Pour une consultation optimale :</strong>
+                ouvrez cette page depuis un navigateur internet sur ordinateur.
+                Utilisez directement les boutons et les icônes de navigation du rapport.
+                <strong>Ne cliquez pas sur le lien Microsoft Power BI affiché en bas du dashboard.</strong>
+            </div>
+
         </div>
-    
-        <div>
-            <strong>Pour une consultation optimale :</strong>
-            ouvrez cette page depuis un navigateur internet sur ordinateur.
-            Utilisez directement les boutons et les icônes de navigation du rapport.
-            <strong>Ne cliquez pas sur le lien Microsoft Power BI affiché en bas du dashboard.</strong>
-        </div>
-    
-    </div>
-    
-    
-    <div class="dashboard-container">
+
+
+        <div class="dashboard-container">
 
 
             <div class="dashboard-frame">
 
 
                 <iframe
-
                     title="Power BI - Gestion immobilière"
-
                     src="https://app.powerbi.com/view?r=eyJrIjoiZWJiOWU2NDMtZGFmOC00NTJkLTg2ZDQtNGZlM2M4M2E4ZWFmIiwidCI6IjI4Y2IzMTRlLTBmNjMtNGRkNC1iYmU4LWM2M2U5MWJjOTFjNCJ9"
-
-                    allowFullScreen="true">
-
+                    allowfullscreen>
                 </iframe>
 
 
@@ -908,7 +807,7 @@
 
 
     <!-- =========================================================
-         ANALYSES
+         ANALYSES PROJET 1
     ========================================================== -->
 
     <section>
@@ -947,7 +846,6 @@
             </div>
 
 
-
             <div class="analysis-row">
 
                 <div class="analysis-number">
@@ -966,7 +864,6 @@
                 </div>
 
             </div>
-
 
 
             <div class="analysis-row">
@@ -988,7 +885,6 @@
                 </div>
 
             </div>
-
 
 
             <div class="analysis-row">
@@ -1019,7 +915,7 @@
 
 
     <!-- =========================================================
-         DONNEES FICTIVES
+         DONNEES FICTIVES PROJET 1
     ========================================================== -->
 
     <div class="data-notice">
@@ -1049,6 +945,321 @@
 
 
     <!-- =========================================================
+         PROJET 2
+    ========================================================== -->
+
+    <div class="project project-two" id="projet-2">
+
+        <div class="project-number">
+            Projet sélectionné — 02
+        </div>
+
+
+        <h2>
+            Pilotage de fonds immobiliers suisses
+        </h2>
+
+
+        <p class="project-description">
+
+            Conception d'un tableau de bord Power BI consacré au pilotage financier
+            et opérationnel de quatre portefeuilles immobiliers. Le rapport analyse
+            la valeur des actifs, la NAV, l'endettement, le NOI, les cash-flows,
+            les immeubles, les régies, les débiteurs et le compte de résultat de la
+            société de gestion.
+
+            L'analyse est dynamique par période, fonds, régie et immeuble.
+
+        </p>
+
+
+        <div class="metrics">
+
+
+            <div class="metric">
+
+                <span class="metric-value">
+                    CHF 3.0 Md
+                </span>
+
+                <span class="metric-label">
+                    valeur du portefeuille
+                </span>
+
+            </div>
+
+
+            <div class="metric">
+
+                <span class="metric-value">
+                    CHF 2.6 Md
+                </span>
+
+                <span class="metric-label">
+                    NAV consolidée
+                </span>
+
+            </div>
+
+
+            <div class="metric">
+
+                <span class="metric-value">
+                    14.9 %
+                </span>
+
+                <span class="metric-label">
+                    LTV des fonds
+                </span>
+
+            </div>
+
+
+            <div class="metric">
+
+                <span class="metric-value">
+                    CHF 139.5 M
+                </span>
+
+                <span class="metric-label">
+                    NOI annuel
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         DASHBOARD PROJET 2
+    ========================================================== -->
+
+    <section id="dashboard-projet-2">
+
+
+        <div class="section-label">
+            Dashboard
+        </div>
+
+
+        <h2 class="section-title">
+            Rapport interactif — Gestion de fonds immobiliers
+        </h2>
+
+
+        <p class="section-description">
+
+            Naviguez entre les sept pages du rapport et utilisez les filtres pour
+            passer d'une vision consolidée à l'analyse détaillée d'un fonds,
+            d'une régie ou d'un immeuble.
+
+        </p>
+
+
+        <div class="dashboard-notice">
+
+            <div class="dashboard-notice-icon">
+                ⓘ
+            </div>
+
+            <div>
+                <strong>Pour une consultation optimale :</strong>
+                ouvrez cette page depuis un navigateur internet sur ordinateur.
+                Utilisez directement les boutons et les icônes de navigation du rapport.
+                <strong>Ne cliquez pas sur le lien Microsoft Power BI affiché en bas du dashboard.</strong>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-container">
+
+
+            <div class="dashboard-frame">
+
+
+                <iframe
+                    title="Power BI - Gestion de fonds immobiliers"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiYWFiMWViYzctZDkyZC00YjNkLWIwMzEtM2FjMjY5ZDViNTQxIiwidCI6IjI4Y2IzMTRlLTBmNjMtNGRkNC1iYmU4LWM2M2U5MWJjOTFjNCJ9"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         ANALYSES PROJET 2
+    ========================================================== -->
+
+    <section>
+
+
+        <div class="section-label">
+            Structure
+        </div>
+
+
+        <h2 class="section-title">
+            Les analyses proposées
+        </h2>
+
+
+        <div class="analysis-list">
+
+
+            <div class="analysis-row">
+
+                <div class="analysis-number">01</div>
+
+                <div class="analysis-title">Synthèse</div>
+
+                <div class="analysis-description">
+                    Vue consolidée du portefeuille : valeur des actifs, NAV, LTV,
+                    NOI, cash-flow net, occupation, encaissement, CAPEX et comparaison
+                    du positionnement rendement/endettement des fonds.
+                </div>
+
+            </div>
+
+
+            <div class="analysis-row">
+
+                <div class="analysis-number">02</div>
+
+                <div class="analysis-title">Fonds</div>
+
+                <div class="analysis-description">
+                    Analyse de chaque fonds individuellement grâce au filtre dédié :
+                    valeur du portefeuille, NAV et NAV par part, dette, LTV, évolution
+                    du cash-flow, rendement des immeubles et comparaison au budget.
+                </div>
+
+            </div>
+
+
+            <div class="analysis-row">
+
+                <div class="analysis-number">03</div>
+
+                <div class="analysis-title">Immeubles</div>
+
+                <div class="analysis-description">
+                    Analyse de chaque immeuble individuellement : localisation,
+                    occupation, loyers facturés et encaissés, charges d'exploitation,
+                    NOI, CAPEX, dette et cash-flow net immobilier.
+                </div>
+
+            </div>
+
+
+            <div class="analysis-row">
+
+                <div class="analysis-number">04</div>
+
+                <div class="analysis-title">Régies</div>
+
+                <div class="analysis-description">
+                    Comparaison des régies selon leur portefeuille, le taux d'occupation,
+                    les encaissements, les débiteurs, le NOI et la performance des
+                    immeubles sous gestion.
+                </div>
+
+            </div>
+
+
+            <div class="analysis-row">
+
+                <div class="analysis-number">05</div>
+
+                <div class="analysis-title">Débiteurs</div>
+
+                <div class="analysis-description">
+                    Suivi de la facturation et des encaissements, de la balance âgée,
+                    des retards, des provisions, des pertes, du DSO et des dossiers
+                    de recouvrement prioritaires.
+                </div>
+
+            </div>
+
+
+            <div class="analysis-row">
+
+                <div class="analysis-number">06</div>
+
+                <div class="analysis-title">Finance</div>
+
+                <div class="analysis-description">
+                    Compte de résultat de la société de gestion avec comparaison au
+                    budget, analyse des revenus par fonds, évolution de la masse
+                    salariale et répartition des charges entre les fonds et le siège.
+                </div>
+
+            </div>
+
+
+            <div class="analysis-row">
+
+                <div class="analysis-number">07</div>
+
+                <div class="analysis-title">Glossaire</div>
+
+                <div class="analysis-description">
+                    Référentiel des principaux indicateurs du rapport, avec leur
+                    définition financière ou immobilière et leur méthode de calcul.
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         DONNEES FICTIVES PROJET 2
+    ========================================================== -->
+
+    <div class="data-notice">
+
+
+        <div class="data-notice-title">
+            Données 100 % fictives
+        </div>
+
+
+        <p>
+
+            Ce projet repose exclusivement sur une base de données synthétique
+            créée à des fins de démonstration. Les fonds, sociétés, régies,
+            immeubles, locataires, financements, valorisations et informations
+            financières présentés ne correspondent à aucune entreprise ni à
+            aucune situation réelle.
+
+            La période d'analyse s'étend de janvier 2025 à décembre 2026.
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- =========================================================
          FOOTER
     ========================================================== -->
 
@@ -1061,7 +1272,7 @@
 
 
         <div>
-            Data & Business Analyst — Power BI
+            Data &amp; Business Analyst — Power BI
         </div>
 
 
