@@ -2,18 +2,14 @@
 <html lang="fr">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Steve Servais | Projets Power BI</title>
 
     <style>
-
         /* =========================================================
            BASE
         ========================================================= */
-
         * {
             box-sizing: border-box;
         }
@@ -39,11 +35,9 @@
             margin: auto;
         }
 
-
         /* =========================================================
            HEADER / HERO
         ========================================================= */
-
         .hero {
             padding: 75px 0 65px 0;
         }
@@ -155,9 +149,7 @@
             font-weight: 600;
         }
 
-
         /* PHOTO */
-
         .hero-photo {
             position: relative;
         }
@@ -184,11 +176,9 @@
             box-shadow: 0 18px 45px rgba(7, 59, 120, 0.14);
         }
 
-
         /* =========================================================
            PROJECT HEADER
         ========================================================= */
-
         .project {
             margin-top: 20px;
             background: #073b78;
@@ -199,7 +189,8 @@
             position: relative;
         }
 
-        .project-two {
+        .project-two,
+        .project-three {
             margin-top: 80px;
         }
 
@@ -244,11 +235,9 @@
             line-height: 1.7;
         }
 
-
         /* =========================================================
            PROJECT METRICS
         ========================================================= */
-
         .metrics {
             position: relative;
             z-index: 1;
@@ -276,11 +265,9 @@
             font-size: 13px;
         }
 
-
         /* =========================================================
            SECTIONS
         ========================================================= */
-
         section {
             margin-top: 65px;
         }
@@ -309,11 +296,9 @@
             margin-bottom: 25px;
         }
 
-
         /* =========================================================
            CONSEIL DE CONSULTATION
         ========================================================= */
-
         .dashboard-notice {
             display: flex;
             align-items: flex-start;
@@ -340,11 +325,9 @@
             color: #073b78;
         }
 
-
         /* =========================================================
            POWER BI
         ========================================================= */
-
         .dashboard-container {
             padding: 10px;
             background: white;
@@ -371,11 +354,9 @@
             border: none;
         }
 
-
         /* =========================================================
            ANALYSES
         ========================================================= */
-
         .analysis-list {
             margin-top: 20px;
             border-top: 1px solid #dfe4eb;
@@ -408,11 +389,9 @@
             line-height: 1.55;
         }
 
-
         /* =========================================================
            DATA NOTICE
         ========================================================= */
-
         .data-notice {
             display: grid;
             grid-template-columns: 200px 1fr;
@@ -436,11 +415,9 @@
             line-height: 1.65;
         }
 
-
         /* =========================================================
            FOOTER
         ========================================================= */
-
         footer {
             display: flex;
             justify-content: space-between;
@@ -457,13 +434,10 @@
             font-weight: 700;
         }
 
-
         /* =========================================================
            RESPONSIVE
         ========================================================= */
-
         @media (max-width: 950px) {
-
             .hero-grid {
                 grid-template-columns: 1fr 190px;
                 gap: 35px;
@@ -477,12 +451,9 @@
                 grid-template-columns: 50px 230px 1fr;
                 gap: 15px;
             }
-
         }
 
-
         @media (max-width: 700px) {
-
             .container {
                 width: calc(100% - 30px);
             }
@@ -546,397 +517,200 @@
             .dashboard-frame {
                 padding-bottom: 80%;
             }
-
         }
-
     </style>
-
 </head>
 
-
 <body>
-
-
 <div class="container">
-
 
     <!-- =========================================================
          PRESENTATION
     ========================================================== -->
-
     <header class="hero">
-
         <div class="hero-grid">
-
-
             <div>
-
-                <div class="hero-label">
-                    Data &amp; Business Analyst
-                </div>
-
+                <div class="hero-label">Data &amp; Business Analyst</div>
 
                 <h1>
-
                     Steve Servais
-
-                    <span class="hero-title">
-                        Tableaux de bord Power BI
-                    </span>
-
+                    <span class="hero-title">Tableaux de bord Power BI</span>
                 </h1>
 
-
                 <p class="hero-description">
-
                     Spécialisé dans l'analyse financière, immobilière et
                     opérationnelle, j'utilise la donnée et la Business Intelligence
                     pour construire des outils de pilotage clairs et directement
                     exploitables par les équipes métier et les directions.
 
-                    Vous trouverez ici deux exemples de projets Power BI ainsi que mon CV.
-
+                    Vous trouverez ici trois exemples de projets Power BI ainsi que mon CV.
                 </p>
 
-
                 <div class="hero-actions">
-
-                    <a
-                        href="#projet-1"
-                        class="btn btn-primary">
-
+                    <a href="#projet-1" class="btn btn-primary">
                         Projet - Société de gestion immobilière
-
                     </a>
 
-
-                    <a
-                        href="#projet-2"
-                        class="btn btn-primary">
-
+                    <a href="#projet-2" class="btn btn-primary">
                         Projet - Société de fonds immobilier
-
                     </a>
 
+                    <a href="#projet-3" class="btn btn-primary">
+                        Projet - Business Review
+                    </a>
 
                     <a
                         href="CV_Steve_Servais.pdf"
                         class="btn btn-secondary"
                         target="_blank"
                         rel="noopener noreferrer">
-
                         Consulter mon CV
-
                     </a>
-
                 </div>
 
-
                 <div class="hero-tags">
-
                     <span class="tag">Power BI</span>
                     <span class="tag">Excel</span>
                     <span class="tag">AI</span>
                     <span class="tag">Analyse de données</span>
                     <span class="tag">Finance</span>
                     <span class="tag">Immobilier</span>
-
                 </div>
-
             </div>
-
-
 
             <div class="hero-photo">
-
-                <img
-                    src="photo-steve.jpg"
-                    alt="Steve Servais">
-
+                <img src="photo-steve.jpg" alt="Steve Servais">
             </div>
-
-
         </div>
-
     </header>
-
-
 
     <!-- =========================================================
          PROJET 1 — CONTENU CONSERVE
     ========================================================== -->
-
     <div class="project" id="projet-1">
+        <div class="project-number">Projet sélectionné — 01</div>
 
-        <div class="project-number">
-            Projet sélectionné — 01
-        </div>
-
-
-        <h2>
-            Pilotage d'une société suisse de gestion immobilière
-        </h2>
-
+        <h2>Pilotage d'une société suisse de gestion immobilière</h2>
 
         <p class="project-description">
-
             Conception d'un tableau de bord Power BI permettant d'analyser
             la performance financière, le portefeuille sous gestion,
             la vacance locative et la charge des collaborateurs.
 
             Le rapport permet une analyse dynamique par période,
             agence et canton.
-
         </p>
 
-
         <div class="metrics">
-
-
             <div class="metric">
-
-                <span class="metric-value">
-                    7
-                </span>
-
-                <span class="metric-label">
-                    agences
-                </span>
-
+                <span class="metric-value">7</span>
+                <span class="metric-label">agences</span>
             </div>
 
-
             <div class="metric">
-
-                <span class="metric-value">
-                    ≈ 59K
-                </span>
-
-                <span class="metric-label">
-                    objets immobiliers
-                </span>
-
+                <span class="metric-value">≈ 59K</span>
+                <span class="metric-label">objets immobiliers</span>
             </div>
 
-
             <div class="metric">
-
-                <span class="metric-value">
-                    24
-                </span>
-
-                <span class="metric-label">
-                    mois analysés
-                </span>
-
+                <span class="metric-value">24</span>
+                <span class="metric-label">mois analysés</span>
             </div>
 
-
             <div class="metric">
-
-                <span class="metric-value">
-                    4
-                </span>
-
-                <span class="metric-label">
-                    axes d'analyse
-                </span>
-
+                <span class="metric-value">4</span>
+                <span class="metric-label">axes d'analyse</span>
             </div>
-
-
         </div>
-
     </div>
-
-
 
     <!-- =========================================================
          DASHBOARD PROJET 1
     ========================================================== -->
-
     <section id="dashboard">
-
-
-        <div class="section-label">
-            Dashboard
-        </div>
-
-
-        <h2 class="section-title">
-            Rapport interactif
-        </h2>
-
+        <div class="section-label">Dashboard</div>
+        <h2 class="section-title">Rapport interactif</h2>
 
         <p class="section-description">
-
             Naviguez via les icônes situées à gauche du rapport et utilisez les filtres
             pour explorer les différents niveaux d'analyse.
-
         </p>
 
-
         <div class="dashboard-notice">
-
-            <div class="dashboard-notice-icon">
-                ⓘ
-            </div>
-
+            <div class="dashboard-notice-icon">ⓘ</div>
             <div>
                 <strong>Pour une consultation optimale :</strong>
                 ouvrez cette page depuis un navigateur internet sur ordinateur.
                 Utilisez directement les boutons et les icônes de navigation du rapport.
                 <strong>Ne cliquez pas sur le lien Microsoft Power BI affiché en bas du dashboard.</strong>
             </div>
-
         </div>
 
-
         <div class="dashboard-container">
-
-
             <div class="dashboard-frame">
-
-
                 <iframe
                     title="Power BI - Gestion immobilière"
                     src="https://app.powerbi.com/view?r=eyJrIjoiZWJiOWU2NDMtZGFmOC00NTJkLTg2ZDQtNGZlM2M4M2E4ZWFmIiwidCI6IjI4Y2IzMTRlLTBmNjMtNGRkNC1iYmU4LWM2M2U5MWJjOTFjNCJ9"
                     allowfullscreen>
                 </iframe>
-
-
             </div>
-
-
         </div>
-
-
     </section>
-
-
 
     <!-- =========================================================
          ANALYSES PROJET 1
     ========================================================== -->
-
     <section>
-
-
-        <div class="section-label">
-            Structure
-        </div>
-
-
-        <h2 class="section-title">
-            Les analyses proposées
-        </h2>
-
+        <div class="section-label">Structure</div>
+        <h2 class="section-title">Les analyses proposées</h2>
 
         <div class="analysis-list">
-
-
             <div class="analysis-row">
-
-                <div class="analysis-number">
-                    01
-                </div>
-
-                <div class="analysis-title">
-                    Synthèse
-                </div>
-
+                <div class="analysis-number">01</div>
+                <div class="analysis-title">Synthèse</div>
                 <div class="analysis-description">
-
                     Vision globale de l'activité, de la rentabilité,
                     du portefeuille et des principaux indicateurs de performance.
-
                 </div>
-
             </div>
 
-
             <div class="analysis-row">
-
-                <div class="analysis-number">
-                    02
-                </div>
-
-                <div class="analysis-title">
-                    Performances financières
-                </div>
-
+                <div class="analysis-number">02</div>
+                <div class="analysis-title">Performances financières</div>
                 <div class="analysis-description">
-
                     Analyse du chiffre d'affaires, du budget,
                     des charges, de l'EBITDA et de la formation du résultat.
-
                 </div>
-
             </div>
 
-
             <div class="analysis-row">
-
-                <div class="analysis-number">
-                    03
-                </div>
-
-                <div class="analysis-title">
-                    Portefeuille de gestion
-                </div>
-
+                <div class="analysis-number">03</div>
+                <div class="analysis-title">Portefeuille de gestion</div>
                 <div class="analysis-description">
-
                     Suivi des propriétaires, immeubles et objets,
                     de la répartition géographique des mandats
                     et de la vacance locative.
-
                 </div>
-
             </div>
 
-
             <div class="analysis-row">
-
-                <div class="analysis-number">
-                    04
-                </div>
-
-                <div class="analysis-title">
-                    Collaborateurs
-                </div>
-
+                <div class="analysis-number">04</div>
+                <div class="analysis-title">Collaborateurs</div>
                 <div class="analysis-description">
-
                     Analyse des effectifs, des ETP, de la charge
                     des portefeuilles et des principaux indicateurs
                     de productivité.
-
                 </div>
-
             </div>
-
-
         </div>
-
     </section>
-
-
 
     <!-- =========================================================
          DONNEES FICTIVES PROJET 1
     ========================================================== -->
-
     <div class="data-notice">
-
-
-        <div class="data-notice-title">
-            Données 100 % fictives
-        </div>
-
-
+        <div class="data-notice-title">Données 100 % fictives</div>
         <p>
-
             Ce projet repose exclusivement sur une base de données synthétique
             créée à des fins de démonstration.
 
@@ -945,32 +719,18 @@
             à aucune entreprise ni à aucune situation réelle.
 
             La période d'analyse s'étend de janvier 2025 à décembre 2026.
-
         </p>
-
-
     </div>
-
-
 
     <!-- =========================================================
          PROJET 2
     ========================================================== -->
-
     <div class="project project-two" id="projet-2">
+        <div class="project-number">Projet sélectionné — 02</div>
 
-        <div class="project-number">
-            Projet sélectionné — 02
-        </div>
-
-
-        <h2>
-            Pilotage de fonds immobiliers suisses
-        </h2>
-
+        <h2>Pilotage de fonds immobiliers suisses</h2>
 
         <p class="project-description">
-
             Conception d'un tableau de bord Power BI dédié au pilotage financier
             et opérationnel de quatre portefeuilles immobiliers. Le rapport combine
             une vision consolidée des principaux indicateurs — valeur des actifs,
@@ -978,281 +738,151 @@
             immeubles, des régies, des débiteurs et du compte de résultat de la
             société de gestion. Les données peuvent être explorées dynamiquement
             par période, fonds, régie ou immeuble.
-
         </p>
 
-
         <div class="metrics">
-
-
             <div class="metric">
-
-                <span class="metric-value">
-                    CHF 3.0 Md
-                </span>
-
-                <span class="metric-label">
-                    valeur du portefeuille
-                </span>
-
+                <span class="metric-value">CHF 3.0 Md</span>
+                <span class="metric-label">valeur du portefeuille</span>
             </div>
 
-
             <div class="metric">
-
-                <span class="metric-value">
-                    CHF 139.5 M
-                </span>
-
-                <span class="metric-label">
-                    NOI annuel des fonds
-                </span>
-
+                <span class="metric-value">CHF 139.5 M</span>
+                <span class="metric-label">NOI annuel des fonds</span>
             </div>
 
-
             <div class="metric">
-
-                <span class="metric-value">
-                    4
-                </span>
-
-                <span class="metric-label">
-                    fonds immobiliers
-                </span>
-
+                <span class="metric-value">4</span>
+                <span class="metric-label">fonds immobiliers</span>
             </div>
 
-
             <div class="metric">
-
-                <span class="metric-value">
-                    143
-                </span>
-
-                <span class="metric-label">
-                    immeubles
-                </span>
-
+                <span class="metric-value">143</span>
+                <span class="metric-label">immeubles</span>
             </div>
-
-
         </div>
-
     </div>
-
-
 
     <!-- =========================================================
          DASHBOARD PROJET 2
     ========================================================== -->
-
     <section id="dashboard-projet-2">
-
-
-        <div class="section-label">
-            Dashboard
-        </div>
-
-
-        <h2 class="section-title">
-            Rapport interactif — Gestion de fonds immobiliers
-        </h2>
-
+        <div class="section-label">Dashboard</div>
+        <h2 class="section-title">Rapport interactif — Gestion de fonds immobiliers</h2>
 
         <p class="section-description">
-
             Naviguez entre les sept pages du rapport et utilisez les filtres pour
             passer d'une vision consolidée à l'analyse détaillée d'un fonds,
             d'une régie ou d'un immeuble.
-
         </p>
 
-
         <div class="dashboard-notice">
-
-            <div class="dashboard-notice-icon">
-                ⓘ
-            </div>
-
+            <div class="dashboard-notice-icon">ⓘ</div>
             <div>
                 <strong>Pour une consultation optimale :</strong>
                 ouvrez cette page depuis un navigateur internet sur ordinateur.
                 Utilisez directement les boutons et les icônes de navigation du rapport.
                 <strong>Ne cliquez pas sur le lien Microsoft Power BI affiché en bas du dashboard.</strong>
             </div>
-
         </div>
 
-
         <div class="dashboard-container">
-
-
             <div class="dashboard-frame">
-
-
                 <iframe
                     title="Power BI - Gestion de fonds immobiliers"
                     src="https://app.powerbi.com/view?r=eyJrIjoiYWFiMWViYzctZDkyZC00YjNkLWIwMzEtM2FjMjY5ZDViNTQxIiwidCI6IjI4Y2IzMTRlLTBmNjMtNGRkNC1iYmU4LWM2M2U5MWJjOTFjNCJ9"
                     loading="lazy"
                     allowfullscreen>
                 </iframe>
-
-
             </div>
-
-
         </div>
-
-
     </section>
-
-
 
     <!-- =========================================================
          ANALYSES PROJET 2
     ========================================================== -->
-
     <section>
-
-
-        <div class="section-label">
-            Structure
-        </div>
-
-
-        <h2 class="section-title">
-            Les analyses proposées
-        </h2>
-
+        <div class="section-label">Structure</div>
+        <h2 class="section-title">Les analyses proposées</h2>
 
         <div class="analysis-list">
-
-
             <div class="analysis-row">
-
                 <div class="analysis-number">01</div>
-
                 <div class="analysis-title">Synthèse</div>
-
                 <div class="analysis-description">
                     Vue consolidée du portefeuille : valeur des actifs, NAV, LTV,
                     NOI, cash-flow net, occupation, encaissement, CAPEX et comparaison
                     du positionnement rendement/endettement des fonds.
                 </div>
-
             </div>
 
-
             <div class="analysis-row">
-
                 <div class="analysis-number">02</div>
-
                 <div class="analysis-title">Fonds</div>
-
                 <div class="analysis-description">
                     Analyse de chaque fonds individuellement grâce au filtre dédié :
                     valeur du portefeuille, NAV et NAV par part, dette, LTV, évolution
                     du cash-flow, rendement des immeubles et comparaison au budget.
                 </div>
-
             </div>
 
-
             <div class="analysis-row">
-
                 <div class="analysis-number">03</div>
-
                 <div class="analysis-title">Immeubles</div>
-
                 <div class="analysis-description">
                     Analyse de chaque immeuble individuellement : localisation,
                     occupation, loyers facturés et encaissés, charges d'exploitation,
                     NOI, CAPEX, dette et cash-flow net immobilier.
                 </div>
-
             </div>
 
-
             <div class="analysis-row">
-
                 <div class="analysis-number">04</div>
-
                 <div class="analysis-title">Régies</div>
-
                 <div class="analysis-description">
                     Comparaison des régies selon leur portefeuille, le taux d'occupation,
                     les encaissements, les débiteurs, le NOI et la performance des
                     immeubles sous gestion.
                 </div>
-
             </div>
 
-
             <div class="analysis-row">
-
                 <div class="analysis-number">05</div>
-
                 <div class="analysis-title">Débiteurs</div>
-
                 <div class="analysis-description">
                     Suivi de la facturation et des encaissements, de la balance âgée,
                     des retards, des provisions, des pertes, du DSO et des dossiers
                     de recouvrement prioritaires.
                 </div>
-
             </div>
 
-
             <div class="analysis-row">
-
                 <div class="analysis-number">06</div>
-
                 <div class="analysis-title">Finance</div>
-
                 <div class="analysis-description">
                     Compte de résultat de la société de gestion avec comparaison au
                     budget, analyse des revenus par fonds, évolution de la masse
                     salariale et répartition des charges entre les fonds et le siège.
                 </div>
-
             </div>
 
-
             <div class="analysis-row">
-
                 <div class="analysis-number">07</div>
-
                 <div class="analysis-title">Glossaire</div>
-
                 <div class="analysis-description">
                     Référentiel des principaux indicateurs du rapport, avec leur
                     définition financière ou immobilière et leur méthode de calcul.
                 </div>
-
             </div>
-
-
         </div>
-
     </section>
-
-
 
     <!-- =========================================================
          DONNEES FICTIVES PROJET 2
     ========================================================== -->
-
     <div class="data-notice">
-
-
-        <div class="data-notice-title">
-            Données 100 % fictives
-        </div>
-
-
+        <div class="data-notice-title">Données 100 % fictives</div>
         <p>
-
             Ce projet repose exclusivement sur une base de données synthétique
             créée à des fins de démonstration. Les fonds, sociétés, régies,
             immeubles, locataires, financements, valorisations et informations
@@ -1260,37 +890,166 @@
             aucune situation réelle.
 
             La période d'analyse s'étend de janvier 2025 à décembre 2026.
-
         </p>
-
-
     </div>
 
+    <!-- =========================================================
+         PROJET 3 — BUSINESS REVIEW
+    ========================================================== -->
+    <div class="project project-three" id="projet-3">
+        <div class="project-number">Projet sélectionné — 03</div>
 
+        <h2>Business Review — Pilotage du compte de résultat</h2>
+
+        <p class="project-description">
+            Conception d'un Business Review Power BI consacré au suivi financier
+            d'une société suisse. Le rapport combine une lecture mensuelle du compte
+            de résultat en Réel et Prévision avec une synthèse MTD, YTD et FY, des
+            comparaisons au budget et à l'année précédente, ainsi qu'un détail
+            dépliable jusqu'au compte comptable. L'analyse peut être filtrée
+            dynamiquement par période, région et agence.
+        </p>
+
+        <div class="metrics">
+            <div class="metric">
+                <span class="metric-value">36</span>
+                <span class="metric-label">mois analysés</span>
+            </div>
+
+            <div class="metric">
+                <span class="metric-value">99</span>
+                <span class="metric-label">comptes comptables</span>
+            </div>
+
+            <div class="metric">
+                <span class="metric-value">3 + HQ</span>
+                <span class="metric-label">périmètres organisationnels</span>
+            </div>
+
+            <div class="metric">
+                <span class="metric-value">2</span>
+                <span class="metric-label">vues de pilotage</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         DASHBOARD PROJET 3
+    ========================================================== -->
+    <section id="dashboard-projet-3">
+        <div class="section-label">Dashboard</div>
+        <h2 class="section-title">Rapport interactif — Business Review</h2>
+
+        <p class="section-description">
+            Analysez la performance mensuelle et cumulée, comparez le Réel au
+            Budget et à N-1, puis dépliez le compte de résultat jusqu'au compte
+            comptable. Les filtres permettent de passer d'une vision consolidée
+            à l'analyse d'une région ou d'une agence.
+        </p>
+
+        <div class="dashboard-notice">
+            <div class="dashboard-notice-icon">ⓘ</div>
+            <div>
+                <strong>Pour une consultation optimale :</strong>
+                ouvrez cette page depuis un navigateur internet sur ordinateur.
+                Utilisez directement les boutons, filtres et icônes de navigation du rapport.
+                <strong>Ne cliquez pas sur le lien Microsoft Power BI affiché en bas du dashboard.</strong>
+            </div>
+        </div>
+
+        <div class="dashboard-container">
+            <div class="dashboard-frame">
+                <iframe
+                    title="Power BI - Business Review"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiYTVmYjA5NDgtZGIwZi00ZjU2LTk4MDQtOTQ5Y2Y2MzYzMmIxIiwidCI6IjI4Y2IzMTRlLTBmNjMtNGRkNC1iYmU4LWM2M2U5MWJjOTFjNCJ9"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         ANALYSES PROJET 3
+    ========================================================== -->
+    <section>
+        <div class="section-label">Structure</div>
+        <h2 class="section-title">Les analyses proposées</h2>
+
+        <div class="analysis-list">
+            <div class="analysis-row">
+                <div class="analysis-number">01</div>
+                <div class="analysis-title">Compte de résultat mensuel</div>
+                <div class="analysis-description">
+                    Lecture du compte de résultat mois par mois avec distinction
+                    entre les périodes réelles et les mois de prévision, jusqu'au
+                    résultat net.
+                </div>
+            </div>
+
+            <div class="analysis-row">
+                <div class="analysis-number">02</div>
+                <div class="analysis-title">Business Review</div>
+                <div class="analysis-description">
+                    Synthèse MTD, YTD et FY avec comparaison du Réel au Budget,
+                    à N-1 et au reforecast annuel, en valeur et en pourcentage.
+                </div>
+            </div>
+
+            <div class="analysis-row">
+                <div class="analysis-number">03</div>
+                <div class="analysis-title">Détail comptable</div>
+                <div class="analysis-description">
+                    Hiérarchie dépliable des rubriques, sous-rubriques et comptes
+                    comptables, avec affichage des principaux soldes intermédiaires.
+                </div>
+            </div>
+
+            <div class="analysis-row">
+                <div class="analysis-number">04</div>
+                <div class="analysis-title">Régions et agences</div>
+                <div class="analysis-description">
+                    Analyse dynamique de la performance consolidée, du siège,
+                    des trois régions et de chaque agence opérationnelle.
+                </div>
+            </div>
+
+            <div class="analysis-row">
+                <div class="analysis-number">05</div>
+                <div class="analysis-title">Glossaire</div>
+                <div class="analysis-description">
+                    Définition des principaux termes financiers utilisés dans le
+                    rapport : MTD, YTD, FY, LTM, reforecast et écarts de performance.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         DONNEES FICTIVES PROJET 3
+    ========================================================== -->
+    <div class="data-notice">
+        <div class="data-notice-title">Données 100 % fictives</div>
+        <p>
+            Ce projet repose exclusivement sur une base de données financière
+            synthétique créée à des fins de démonstration. Les sociétés, régions,
+            agences, produits, comptes comptables, budgets et informations
+            financières présentés ne correspondent à aucune entreprise ni à
+            aucune situation réelle.
+
+            La période d'analyse s'étend de janvier 2024 à décembre 2026.
+        </p>
+    </div>
 
     <!-- =========================================================
          FOOTER
     ========================================================== -->
-
     <footer>
-
-
-        <div class="footer-name">
-            Steve Servais
-        </div>
-
-
-        <div>
-            Data &amp; Business Analyst — Power BI
-        </div>
-
-
+        <div class="footer-name">Steve Servais</div>
+        <div>Data &amp; Business Analyst — Power BI</div>
     </footer>
 
-
 </div>
-
-
 </body>
 
 </html>
